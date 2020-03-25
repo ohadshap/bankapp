@@ -24,8 +24,8 @@ class App extends Component {
       transactions: transactions.data })
   }
 
-  getTransactions = () => {
-    return axios.get('http://localhost:2700/transactions')
+  getTransactions = async () => {
+    return await axios.get('http://localhost:2700/transactions')
   }
 
 

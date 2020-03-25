@@ -4,8 +4,8 @@ import axios from 'axios'
 
 class Transaction extends Component {
 
-    deleteTransaction = () => {
-        axios.delete(`http://localhost:2700/transaction/${this.props.action._id}`)
+    deleteTransaction = async () => {
+        await axios.delete(`http://localhost:2700/transaction/${this.props.action._id}`)
         this.props.delete(this.props.action._id)
     }
   

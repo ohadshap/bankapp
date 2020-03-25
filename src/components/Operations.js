@@ -44,12 +44,14 @@ class Operations extends Component {
                     vendor: 'rami',
                     category: 'foods' }
             })
-            this.props.deposit(this.state.amount, this.state.vendor, this.state.category)
-            this.setState({
-                amount: "",
-                vendor: "",
-                category: ""
-            });
+            .then(function() {
+                this.props.deposit(this.state.amount, this.state.vendor, this.state.category)
+                this.setState({
+                    amount: "",
+                    vendor: "",
+                    category: ""
+                });
+            })
         }
     }
 
@@ -66,12 +68,14 @@ class Operations extends Component {
                         vendor: this.state.vendor,
                         category: this.state.category }
                 })
-                this.props.withdraw(this.state.amount, this.state.vendor, this.state.category)
-                this.setState({
-                    amount: "",
-                    vendor: "",
-                    category: ""
-                });
+                .then(function() {   
+                    this.props.withdraw(this.state.amount, this.state.vendor, this.state.category)
+                    this.setState({
+                        amount: "",
+                        vendor: "",
+                        category: ""
+                    });
+                })
 
             } else {
                 alert('you poor bag go to work!')

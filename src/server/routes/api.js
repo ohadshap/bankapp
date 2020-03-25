@@ -18,7 +18,7 @@ router.post('/transaction', async function(req, res) {
 })
 
 router.delete('/transaction/:id', async function(req, res) {
-    let transactionId = req.params.id
+    const transactionId = req.params.id
     await Transaction.findOneAndDelete({
         _id: transactionId    
     })
