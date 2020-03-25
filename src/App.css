@@ -1,0 +1,249 @@
+body{
+  background-color: #bdc3c7;
+}
+
+.App {
+  text-align: center;
+  display: grid;
+  grid-template-rows: 15% 90% ;
+  height: 100vh;
+}
+
+#main-links {
+  text-align: left;
+}
+
+#transactionPage{
+  display: grid;
+  grid-template-rows: 1fr 9fr;
+}
+
+#transTitles{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#transactionsBox {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  row-gap: 5px;
+  text-align: center;
+  margin: 10px;
+  padding: 5px;
+}
+
+.actionBox {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 10px;
+  padding: 5px;
+  border: 2px solid black;
+  box-shadow: 1px 1px;
+  border-radius: 5px;
+  width: 250px;
+  height: 55px;
+  justify-self: center;
+}
+
+#operationBox {
+  text-align: center;
+}
+
+#breakdownBox {
+  display: grid;
+  grid-template-rows: 1fr 9fr;
+  row-gap: 5px;
+  text-align: center;
+  margin: 10px;
+  padding: 5px;
+}
+
+#homeBox {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 1fr 1fr 8fr;
+}
+
+#breakdownBalance{
+  text-align: center;
+  margin: 15px
+}
+
+#chart{
+  display: inline-block;
+}
+
+.canvass{
+  display: inline-block;
+}
+
+.action {
+  display: grid;
+  justify-self: center;
+}
+
+.posPrice {
+  color: green;
+}
+
+.negPrice {
+  color: red;
+}
+
+#filterTitle {
+  margin: 15px;
+}
+
+.categoryList {
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 5px;
+}
+
+.barLength{
+  height: 20px;
+  background-color: brown;
+  color: brown;
+}
+
+#breakdownList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  height: 25px;
+  row-gap: 5px;
+  text-align: center;
+  margin: 10px;
+  padding: 5px;
+}
+
+#breakdownTitles{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+input{
+  border: 1px solid black;
+  border-radius: 3px;
+  text-align: center;
+}
+
+
+/* .actionCategory{
+
+}
+
+.actionAmount{
+
+}
+
+.avtionVendor{
+
+} */
+
+.actionDelete{
+  font-size: xx-small;
+}
+
+/*********** Hamburger Menu ************/
+
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+
+#menuToggle li:hover {
+  color: #ecf0f1;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 6px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #f9ebe0;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+  background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: translate(0px, -5px);
+  background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  transform: none;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: translate(0, 5px);
+}
+
+#menu {
+  position: absolute;
+  width: 160px;
+  height: 100vh;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #8d99ae;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+  color: #344055;
+}
+
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+#menuToggle input:checked ~ h1 {
+  transform: translate(300px);
+}
+
+/*********** Hamburger Menu ************/
+
